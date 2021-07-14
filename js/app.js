@@ -1,14 +1,16 @@
 'use strict';
-let numberOfFilms =''; 
+let numberOfFilms; 
 
   
   //numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', '');
-while(numberOfFilms ==='' || numberOfFilms === null || numberOfFilms.length > 50) {
-  numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', '');
+
+
+function Start() {
+  while(numberOfFilms =='' || numberOfFilms == null || numberOfFilms.length > 50 || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?', '');
+  }; 
 }; 
-
-
-
+Start();
 let personalMovieDB = {
   
   count: numberOfFilms,
